@@ -6,6 +6,7 @@ Bienvenida::Bienvenida(QWidget *parent)
     , ui(new Ui::Bienvenida)
 {
     ui->setupUi(this);
+    this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
 }
 
 Bienvenida::~Bienvenida()

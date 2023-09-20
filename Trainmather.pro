@@ -9,14 +9,24 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    cuestionario.cpp \
+    juego.cpp \
     main.cpp \
-    bienvenida.cpp
+    bienvenida.cpp \
+    menu.cpp \
+    pregunta.cpp
 
 HEADERS += \
-    bienvenida.h
+    bienvenida.h \
+    cuestionario.h \
+    juego.h \
+    menu.h \
+    pregunta.h
 
 FORMS += \
-    bienvenida.ui
+    bienvenida.ui \
+    juego.ui \
+    menu.ui
 
 TRANSLATIONS += \
     Trainmather_es_419.ts
@@ -27,3 +37,6 @@ CONFIG += embed_translations
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    Recursos.qrc
